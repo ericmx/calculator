@@ -1,0 +1,8 @@
+<h1>Calculate#add</h1>
+
+<%= form_tag( {action: "results"}, method: "get") do %>
+  <%= number_field_tag(:first_number, "Enter the first number", step: :any) %>
+  <%= number_field_tag(:second_number, "Enter the second number", step: :any) %>
+  <%= submit_tag("Add!") %>
+
+<% end  %>
