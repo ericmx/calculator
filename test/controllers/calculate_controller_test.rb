@@ -6,7 +6,7 @@ class CalculateControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get results" do
+  test "should get calculate" do
     get calculate_results_url
     assert_response :success
   end

@@ -1,0 +1,23 @@
+<h1>Calculate</h1>
+
+
+<p>
+
+
+  <%= form_tag( {action: "calculate"}, method: "get") do %>
+
+    <%= number_field_tag(:first_number, params[:first_number], step: :any) %>
+
+    <%= number_field_tag(:second_number, params[:second_number], step: :any) %>
+
+    <%= submit_tag("+", name: "addition") %>
+    <%= submit_tag("-", name: "subtraction") %>
+
+<% end  %>
+
+</p>
+
+<p>The result is: <%=label_tag( @result) %>
+</p>
+
+
