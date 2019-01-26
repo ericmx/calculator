@@ -1,13 +1,28 @@
-<h1>Calculate</h1>
+<h1>Eric's not-so-fancy calculator</h1>
 
 
 <p>
-
-
+<h3>Enter two numbers</h3>
   <%= form_tag( {action: "calculate"}, method: "get") do %>
 
-    <%= number_field_tag(:first_number, params[:first_number], step: :any) %>
+  <%= button_tag "7", :name => 'num_7', :value => 7, :type => 'button'  %>
+  <%= button_tag "8", :name => 'num_8', :value => 8, :type => 'button'  %>
+  <%= button_tag "9", :name => 'num_9', :value => 9, :type => 'button'  %>
+  <br>
+  <%= button_tag "4", :name => 'num_4', :value => 4, :type => 'button'  %>
+  <%= button_tag "5", :name => 'num_5', :value => 5, :type => 'button'  %>
+  <%= button_tag "6", :name => 'num_6', :value => 6, :type => 'button'  %>
+  <br>
+  <%= button_tag "1", :name => 'num_1', :value => 1, :type => 'button'  %>
+  <%= button_tag "2", :name => 'num_2', :value => 2, :type => 'button'  %>
+  <%= button_tag "3", :name => 'num_3', :value => 3, :type => 'button'  %>
+  <br>
+  <%= button_tag "0", :name => 'num_0', :value => 0, :type => 'button'  %>
+  <br>
 
+    <%= label_tag(:first_number, "First number:") %>
+    <%= number_field_tag(:first_number, params[:first_number], step: :any) %>
+    <%= label_tag(:second_number_number, "Second number:") %>
     <%= number_field_tag(:second_number, params[:second_number], step: :any) %>
 
     <%= submit_tag("+", name: "addition") %>
@@ -19,5 +34,4 @@
 
 <p>The result is: <%=label_tag( @result) %>
 </p>
-
 
